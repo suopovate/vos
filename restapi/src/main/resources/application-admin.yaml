@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: restapi
+  security:
+    user:
+      name: vate
+      password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      # 比较重要,默认 /actuator spring-boot-admin 扫描不到
+      base-path: /

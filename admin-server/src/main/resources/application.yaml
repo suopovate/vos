@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: admin-server
+  profiles:
+    active: pro,admin,eureka
+server:
+  port: 3333
+---
+spring:
+  profiles: dev
+---
+spring:
+  profiles: pro
+  security:
+    user:
+      name: "vate"
+      password: "123456"
+eureka:
+  instance:
+    metadata-map:
+      user.name: "vate"         #These two are needed so that the server
+      user.password: "123456"  #can access the protected client endpoints
